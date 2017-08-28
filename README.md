@@ -12,6 +12,10 @@ npm install
 start the app:
 npm start (nodemon app)
 
+Traverse to `http://localhost:4200/`, click the portfolio dropdown and select "Go Health" to view the code test.
+
+Thanks!
+
 # Portfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.1.
