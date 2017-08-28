@@ -14,6 +14,9 @@ npm start (nodemon app)
 
 Traverse to `http://localhost:4200/`, click the portfolio dropdown and select "Go Health" to view the code test.
 
+In the project, navaigate to src/components/patient
+
+The rest endpoint is https://github.com/LoseTheQuit/gohealth-api
 Thanks!
 
 # Portfolio

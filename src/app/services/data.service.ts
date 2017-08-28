@@ -18,7 +18,7 @@ export class DataService {
     console.log("insuranceEligibilityAPI");
 
     return this.http
-      .post("http://localhost:7000/healthcare", data)
+      .post("http://gohealth-api.herokuapp.com/healthcare", data)
       .map(res => res.json());
   }
 }

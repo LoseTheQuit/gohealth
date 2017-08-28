@@ -92,7 +92,7 @@ export class PatientComponent implements OnInit {
           this.validInsurance = true;
           let api = JSON.parse(res.body);
           this.copay = api.data.coverage.copay[0].copayment.amount;
-          // console.log(api.data.coverage.copay[0].copayment.amount);
+          console.log(api.data);
         }
       });
   }
