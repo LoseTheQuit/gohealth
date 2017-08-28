@@ -1,12 +1,16 @@
 # How to use
 
-download the project
+download the project: 
+https://github.com/LoseTheQuit/gohealth.git
 
-navigate to the folder
+navigate to the folder:
+cd gohealth
 
-install dependencies with npm install
+install dependencies:
+npm install
 
-start the app with npm start
+start the app:
+npm start (nodemon app)
 
 # Portfolio
 
