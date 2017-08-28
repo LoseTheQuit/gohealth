@@ -1,14 +1,18 @@
-import { AppPage } from './app.po';
+// end to end tests that simulate a real user
 
-describe('portfolio App', () => {
+import { AppPage } from "./app.po";
+
+describe("portfolio App", () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it("should display welcome message", () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual("Welcome to app!");
   });
 });
+
+// end to end tests that simulate a real user

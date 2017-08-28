@@ -1,0 +1,73 @@
+.section.section-showcase .showcase-magrudy {
+  height: 700px;
+  width: 100%;
+  background: url("http://go.medassets.com/rs/099-EMG-811/images/medAssets-showcase.jpg")
+    no-repeat 100% 30%;
+  background-size: cover;
+}
+
+@media (max-width: 950px) {
+  .h1fontAdjustments {
+    font-size: 54px;
+  }
+  .paragraphAdjustments {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 650px) {
+  .h1fontAdjustments {
+    font-size: 74px;
+  }
+  .paragraphAdjustments {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 450px) {
+  .h1fontAdjustments {
+    font-size: 44px;
+  }
+  .paragraphAdjustments {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 800px) {
+  .h1fontAdjustments {
+    font-size: 44px;
+  }
+  .paragraphAdjustments {
+    font-size: 17px;
+  }
+  .section.section-showcase .showcase-magrudy {
+    height: 700px;
+    width: 100%;
+    background: url("http://go.medassets.com/rs/099-EMG-811/images/medAssets-showcase.jpg")
+      no-repeat 40% 30%;
+    background-size: cover;
+  }
+}
+
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+
+body {
+  overflow: auto !important;
+}

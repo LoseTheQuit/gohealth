@@ -1,0 +1,114 @@
+.iceWhite {
+  color: rgba(241, 241, 241, .65);
+  transition: all linear 1.00s;
+  float: right;
+}
+.float_right {
+  transition: all linear 1.00s;
+  float: right;
+}
+
+.mediumBlue {
+  color: #007db6;
+  transition: all linear 1.00s;
+}
+.lightBlue {
+  color: #009ddc;
+  transition: all linear 1.00s;
+}
+.iceWhite:hover {
+  color: #007db6;
+  color: rgba(241, 241, 241, .50);
+  transition: all linear 1.00s;
+}
+.nav > li > a:focus,
+.nav > li > a:hover {
+  transition: all linear 1.00s;
+  color: rgba(0, 0, 0, .50);
+  /* color: rgba(256, 256, 256, .95); */
+  /* background-color: rgba(256, 256, 256, .95); */
+}
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
+  transition: all linear 1.00s;
+  /* color: rgba(0, 0, 0, .90) !important; */
+  /* color: rgba(250, 250, 250, .90) !important; */
+  /* background-color: rgba(256, 256, 256, .95) !important; */
+}
+.addSomeMargin {
+  margin-bottom: 20px;
+}
+.dividingLine {
+  background-color: #009ddc;
+  width: 80%;
+  height: 3px;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  opacity: .15;
+}
+.navbar {
+  height: 70px;
+  padding-top: 20px;
+}
+.dropdown-menu {
+  background-color: rgba(256, 256, 256, .10);
+  color: white;
+}
+.dropdown-menu li > a {
+  /* background-color: rgba(256, 256, 256, .10); */
+
+  color: white;
+}
+.dropdown-menu > li {
+  padding: 5px;
+}
+/* .dropdown-menu li > a:hover {
+  background: blue;
+} */
+.mashUpCallOut {
+  height: 100vh;
+  color: white;
+  background: #00a3e0;
+}
+.navbar-global 
+.navbar-toggle {
+  border-color: #777;
+}
+.navbar-global
+ .navbar-toggle li {
+  display: block;
+}
+.navbar-global 
+.navbar-toggle 
+.icon-bar {
+  background-color: #777;
+}
+.dropdown-header {
+  color: #fff;
+}
+.headLine {
+  color: white;
+  font-size: 89;
+}
+
+.nav a {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.nav li {
+  display: inline;
+}
+
+.navbar {
+  background-color: transparent;
+  background: transparent;
+}
+
+navbar.transparent.navbar-inverse .navbar-inner {
+  background: rgba(0, 0, 0, 0.4);
+}

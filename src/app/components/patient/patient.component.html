@@ -1,0 +1,190 @@
+<body class="overflowOverRide">
+  <div class="overflowOverRide">
+    <div class="bodyWrapper ">
+      <div class="background_overlay ">
+
+        <div class="container-fluid">
+          <div class="navWrapper"></div>
+
+          <div class="col-md-12" id="stats_container ">
+            <div class="card">
+
+              <div class="stats_container">
+
+                <div class="col-md-12 padding_0">
+                  <div class="row">
+
+                    <div class="headerWrapper col-md-12">
+
+                      <div class="col-md-9">
+                        <h2 class="white_text">GoHealth Urgent Care</h2>
+                        <p><i>we need a few bits of your demographic and insurance information to expedite the registration process</i></p>
+                      </div>
+
+                      <div class="col-md-3">
+                        <label for="as">Pre-fill test patient?</label>
+                        <select [(ngModel)]="selectedPatient" name="testPatients" class="form-control" (change)="fireTestPatientChange(selectedPatient)"> 
+                              
+                          <option *ngFor="let patient of testPatients" [value]="patient.name">
+                                {{patient.name}}
+                          </option>
+ 
+                        </select>
+
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+                      <div>
+
+                        <label for="hasIns">Do you Have Health Insurance?</label>
+                        <br>
+                        <input type="button" name="hasIns" value="yes" class="ghost_button" (click)="insuranceCheck(1)">
+                        <input type="button" name="hasIns" value="no" class="ghost_button" (click)="insuranceCheck(0)">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="hasIns">Valid Insurance?</label>
+
+                      <div *ngIf="!validInsurance">
+                        <div class="ghost_button _red">
+                          Your insurance has not been validated.
+                        </div>
+                      </div>
+                      <div *ngIf="validInsurance">
+                        <div class="ghost_button _green">
+                          Your insurance has been validated.
+                        </div>
+                      </div>
+
+
+                    </div>
+
+                    <div>
+
+                      <br>
+                      <br>
+                      <br>
+                      <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="ui form">
+
+
+                        <div>
+                          <label for="name">First Name:</label><br>
+                          <input type="text" class="form-control white_text" required [(ngModel)]="firstName" name="firstName">
+                        </div>
+
+                        <div>
+                          <label for="name">Last Name:</label><br>
+                          <input type="text" class="form-control white_text" required [(ngModel)]="lastName" name="lastName">
+                        </div>
+
+                        <div>
+                          <label for="dob">DOB:</label><br>
+                          <input type="date" class="form-control white_text" required [(ngModel)]="dob" name="dob">
+                        </div>
+                        <div>
+                          <label for="phone">Phone Number:</label><br>
+                          <input type="text" class="form-control white_text" required [(ngModel)]="phone" name="phone">
+                        </div>
+
+
+
+                        <div *ngIf=hasInsurance [class.fadeIn]="hasInsurance" class="fadeOut">
+
+                          <div>
+                            <label for="insuranceID">Insurance ID:</label><br>
+                            <input type="text" [(ngModel)]="insuranceID" name="insuranceID" class="white_text _fadder" required>
+                          </div>
+
+                          <div>
+                            <label for="selectedCarrier">Insurance Carrier:</label><br>
+
+                            <select [(ngModel)]="selectedCarrier" name="selectedCarrier" class="form-control" required>
+                                <option *ngFor="let carrier of insuranceCarriers" [value]="carrier" >
+                                 {{carrier}}
+                               </option> 
+                            </select>
+
+                          </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+                          <input type="submit" name="submit" class="ghost_button">
+
+                        </div>
+                        <div class="col-md-6">
+                          <div class="col-md-12">
+                            <div class="col-md-6">
+                              <div>
+                                <h3 class="white_text">Copay: {{copay | currency:'USD':true}}</h3>
+
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <!-- <input *ngIf="validInsurance" type="button" name="submit" class="ghost_button _green" value="Completed registration?" (click)="redirect()"> -->
+                              <a *ngIf="validInsurance" href="https://www.gohealthuc.com/about/" class="ghost_button _green">Completed registration?</a>
+                            </div>
+                          </div>
+
+                        </div>
+
+                      </form>
+
+                    </div>
+
+                    <!-- <ul>
+                      <li>First Name: {{firstName}}</li>
+                      <li>Last Name: {{lastName}}</li>
+                      <li>DOB: {{dob}}</li>
+                      <li>Phone: {{phone}}</li>
+                      <li>Insurance Carrier: {{selectedCarrier}}</li>
+                      <li>Insurance ID: {{insuranceID}}</li>
+                    </ul> -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <form name="voteForm" ng-submit="submitForm()" novalidate>
+            <span class="close close-x">x</span>
+            <p>CAST YOUR VOTE!</p>
+            <div class="col-md-12 col-sm-12 col-xs-12 display_flex flex-item-center flex-direction-column padding_0">
+              <div class="col-md-12 col-sm-6 col-xs-6 display_flex flex-item-center padding_0">
+                <h1 class="robotoh7">Would you allow California to secede from the Union?</h1>
+              </div>
+              <div class="col-md-12 col-sm-6 col-xs-6 display_flex flex-item-center">
+
+
+                <select class="ghost-botton ghost-botton--state-select display_flex flex-item-center" ng-model="question_1" required ng-options="state.name for state in statesArr">
+                        <option value=""  class="text-center" disabled selected >Select State</option>
+                </select>
+
+
+              </div>
+
+              <div class="col-md-12 col-sm-6 col-xs-6 display_flex  flex-item-center">
+                <button type="submit" class="btn ghost-botton ghost-btn" ng-disabled="voteForm.$invalid" ng-click="addVoteFromForm('yes')">Yes</button>
+                <button type="submit" class="btn ghost-botton ghost-btn" ng-disabled="voteForm.$invalid" ng-click="addVoteFromForm('no')">No</button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</body>

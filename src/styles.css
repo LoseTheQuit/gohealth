@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+/* FONTS */
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Bangers|Oswald");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,400,500,700,800");
+@import url( "https://fonts.googleapis.com/icon?family=Material+Icons");
+
+/* PLUGINS */
+@import "../src/assets/plugins/bootstrap/css/bootstrap.min.css";
+@import "../bower_components/materialize/dist/css/materialize.min.css";
+
+/* STYLES */
+@import "../src/css/resume.css";
+@import "../src/css/index.css";
+@import "../src/css/nav.css";
+@import "../src/css/inject.css";

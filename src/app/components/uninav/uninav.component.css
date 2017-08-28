@@ -1,0 +1,26 @@
+.mixed_text {
+  /* mix-blend-mode: screen; */
+  /* mix-blend-mode: lighten; */
+  /* mix-blend-mode: color-dodge; */
+  /* mix-blend-mode: hard-light; */
+  /* mix-blend-mode: difference; */
+  /* mix-blend-mode: exclusion; */
+  mix-blend-mode: luminosity;
+}
+
+.navColor {
+  color: #000;
+  background: rgba(0.0.0.0);
+}
+
+.no_margin {
+  margin: 0px;
+}
+
+.no_border {
+  border: none;
+}
+
+.no_box_shadow {
+  box-shadow: none;
+}
