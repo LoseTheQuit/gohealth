@@ -61,55 +61,57 @@
 
 
                     </div>
-
+                    <br>
+                    <br>
+                    <br>
                     <div>
 
-                      <br>
-                      <br>
-                      <br>
+
                       <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="ui form">
 
 
-                        <div>
-                          <label for="name">First Name:</label><br>
-                          <input type="text" class="form-control white_text" required [(ngModel)]="firstName" name="firstName">
-                        </div>
-
-                        <div>
-                          <label for="name">Last Name:</label><br>
-                          <input type="text" class="form-control white_text" required [(ngModel)]="lastName" name="lastName">
-                        </div>
-
-                        <div>
-                          <label for="dob">DOB:</label><br>
-                          <input type="date" class="form-control white_text" required [(ngModel)]="dob" name="dob">
-                        </div>
-                        <div>
-                          <label for="phone">Phone Number:</label><br>
-                          <input type="text" class="form-control white_text" required [(ngModel)]="phone" name="phone">
-                        </div>
-
-
-
-                        <div *ngIf=hasInsurance [class.fadeIn]="hasInsurance" class="fadeOut">
-
+                        <div class="col-md-12">
                           <div>
-                            <label for="insuranceID">Insurance ID:</label><br>
-                            <input type="text" [(ngModel)]="insuranceID" name="insuranceID" class="white_text _fadder" required>
+                            <label for="firstName">First Name:</label><br>
+                            <input type="text" class="form-control white_text" required [(ngModel)]="firstName" name="firstName">
                           </div>
 
                           <div>
-                            <label for="selectedCarrier">Insurance Carrier:</label><br>
+                            <label for="lastName">Last Name:</label><br>
+                            <input type="text" class="form-control white_text" required [(ngModel)]="lastName" name="lastName">
+                          </div>
 
-                            <select [(ngModel)]="selectedCarrier" name="selectedCarrier" class="form-control" required>
-                                <option *ngFor="let carrier of insuranceCarriers" [value]="carrier" >
-                                 {{carrier}}
-                               </option> 
-                            </select>
+                          <div>
+                            <label for="dob">DOB:</label><br>
+                            <input type="date" class="form-control white_text" required [(ngModel)]="dob" name="dob">
+                          </div>
+                          <div>
+                            <label for="phone">Phone Number:</label><br>
+                            <input type="text" class="form-control white_text" required [(ngModel)]="phone" name="phone">
+                          </div>
+                          <div *ngIf=hasInsurance [class.fadeIn]="hasInsurance" class="fadeOut">
+
+                            <div>
+                              <label for="insuranceID">Insurance ID:</label><br>
+                              <input type="text" [(ngModel)]="insuranceID" name="insuranceID" class="white_text _fadder" required>
+                            </div>
+
+                            <div>
+                              <label for="selectedCarrier">Insurance Carrier:</label><br>
+
+                              <select [(ngModel)]="selectedCarrier" name="selectedCarrier" class="form-control" required>
+                                                              <option *ngFor="let carrier of insuranceCarriers" [value]="carrier" >
+                                                               {{carrier}}
+                                                             </option> 
+                          </select>
+
+                            </div>
 
                           </div>
 
                         </div>
+
+
 
                         <div class="col-md-6">
                           <input type="submit" name="submit" class="ghost_button">
